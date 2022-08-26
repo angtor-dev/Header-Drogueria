@@ -44,7 +44,7 @@
                         <img width="300" height="155" src="https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1-300x155.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1-300x155.png 300w, https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1-768x397.png 768w, https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1.png 794w" sizes="(max-width: 300px) 100vw, 300px">
                     </a>
                 </div>
-                <div class="h-navigation">
+                <div class="h-navigation collapse">
                     <nav>
                         <ul>
                             <li>
@@ -57,10 +57,14 @@
                                     <span>Nosotros</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="h-dropdown-parent">
                                 <a href="#" class="d-flex">
                                     <span>Registrarse +</span><span class="drop-arrow"><i class="fa-solid fa-caret-down"></i></span>
                                 </a>
+                                <ul class="h-dropdown">
+                                    <li><a href="#">Registro Clientes</a></li>
+                                    <li><a href="#">Registro Proveedor</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">
@@ -74,11 +78,59 @@
                     <a href="#">
                         <span class="icon">
                             <i class="fa-regular fa-circle-user"></i>
-                        </span><span>INICIAR SESIÓN / CLIENTES</span>
+                        </span><span>INICIAR SESIÓN<span class="clientes"> / CLIENTES</span></span>
                     </a>
+                </div>
+                <div class="h-menu">
+                    <div class="container">
+                        <i class="fa-solid fa-bars icon"></i>
+                        <i class="fa-solid fa-xmark icon d-none"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <script>
+        const dropdownParent = document.querySelector('.h-dropdown-parent')
+        const dropdown = document.querySelector('.h-dropdown-parent .h-dropdown')
+
+        dropdownParent.addEventListener('mouseenter', e => {
+            setTimeout(() => {
+                dropdown.style.display = 'block'
+                dropdown.style.opacity = '1'
+            }, 300)
+            if (typeof pLeaveTimer !== 'undefined') {
+                clearTimeout(pLeaveTimer)
+            }
+        })
+
+        dropdownParent.addEventListener('mouseleave', e => {
+            pLeaveTimer = setTimeout(() => {
+                dropdown.style.opacity = '0'
+                setTimeout(() => {
+                    dropdown.style.display = 'none'
+                }, 300)
+            }, 450)
+        })
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(pLeaveTimer)
+            dropdown.style.display = 'block'
+        })
+
+        const menuButton = document.querySelector('.h-menu .container')
+
+        menuButton.addEventListener('click', () => {
+            let bars = menuButton.querySelector('.fa-bars')
+            let xmark = menuButton.querySelector('.fa-xmark')
+            let navigation = document.querySelector('#header .main-header .wrapper .h-navigation')
+
+            bars.classList.toggle('d-none')
+            xmark.classList.toggle('d-none')
+
+            navigation.classList.toggle('collapse')
+        })
+    </script>
 </body>
 </html>
