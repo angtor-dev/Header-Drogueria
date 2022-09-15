@@ -39,6 +39,7 @@ a {
 #header ul {
     list-style: none;
     font-size: 0;
+    margin-bottom: 0!important;
 }
 
     /* --- Top Header --- */
