@@ -23,6 +23,7 @@ body {
 #header {
     font-family: "Roboto", Sans-serif;
     font-size: 17px;
+    margin-bottom: 20px;
 }
 
 #header .top-header {
@@ -202,5 +203,71 @@ body {
 @media (min-width: 1260px) {
     #header .top-header li:first-child {
         margin-left: 0;
+    }
+}
+
+/* Contenido principal */
+.gap-3 {
+    gap: 16px;
+}
+
+.sm-text {
+    font-size: .875rem;
+}
+
+.btn-icon {
+    gap: .5em;
+}
+
+#tablaPedidos th,
+#tablaFacturas th {
+    border-top: none;
+}
+#tablaPedidos td,
+#tablaFacturas td {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.table-responsive.border {
+    border-radius: calc(0.25rem - 1px);
+}
+.table-responsive.border>table {
+    margin-bottom: 0;
+}
+
+th.opciones {
+    text-align: center;
+}
+td.opciones a {
+    display: flex;
+    width: fit-content;
+    padding: 8px;
+    margin: auto;
+}
+
+@media (max-width: 575.98px) {
+    .filtros {
+        flex-direction: column;
+        align-items: stretch!important;
+    }
+
+    .fechas {
+        flex-direction: column;
+        gap: 0!important;
+    }
+
+    .fechas > label {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .options-group {
+        justify-content: space-between;
+    }
+
+    .options-group > .btn {
+        width: fit-content;
     }
 }

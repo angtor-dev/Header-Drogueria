@@ -86,6 +86,195 @@
             </div>
         </nav>
     </header>
+
+    <div class="container">
+        <main>
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#tabPedidos" data-toggle="tab" data-target="#tabPedidos" role="tab" class="nav-link active">Pedidos</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#tabFacturas" data-toggle="tab" data-target="#tabFacturas" role="tab" class="nav-link">Facturas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" role="tabpanel" id="tabPedidos">
+                                <div class="d-flex justify-content-between align-items-center pb-2 filtros">
+                                    <div class="d-flex gap-3 fechas">
+                                        <label class="form-label">
+                                            <span>Desde: </span>
+                                            <input type="date" id="desdePedido" class="form-control">
+                                        </label>
+                                        <label class="form-label">
+                                            <span>Hasta: </span>
+                                            <input type="date" id="hastaPedido" class="form-control">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-light btn-icon d-flex align-items-center border">
+                                            <svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>
+                                            Buscar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="table-responsive border">
+                                    <table class="table table-hover" id="tablaPedidos">
+                                        <thead class="card-header">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Cliente</th>
+                                                <th scope="col">Vendedor</th>
+                                                <th scope="col" class="opciones">Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row"><b>123</b></td>
+                                                <td>25/10/2022</td>
+                                                <td>Farma Centro Quibor, C. A</td>
+                                                <td>Jennifer Lopez</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>142</b></td>
+                                                <td>27/10/2022</td>
+                                                <td>Centro Clinico Valentina Canabal C. A</td>
+                                                <td>Wilfredo Torres</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>158</b></td>
+                                                <td>03/11/2022</td>
+                                                <td>Farma Economica Carora, C. A</td>
+                                                <td>Carlos Morillo</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>123</b></td>
+                                                <td>25/10/2022</td>
+                                                <td>Farma Centro Quibor, C. A</td>
+                                                <td>Jennifer Lopez</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>142</b></td>
+                                                <td>27/10/2022</td>
+                                                <td>Centro Clinico Valentina Canabal C. A</td>
+                                                <td>Wilfredo Torres</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>158</b></td>
+                                                <td>03/11/2022</td>
+                                                <td>Farma Economica Carora, C. A</td>
+                                                <td>Carlos Morillo</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" role="tabpanel" id="tabFacturas">
+                                <div class="d-flex justify-content-between align-items-center pb-2 filtros">
+                                    <div class="d-flex gap-3 fechas">
+                                        <label class="form-label">
+                                            <span>Desde: </span>
+                                            <input type="date" id="desdePedido" class="form-control">
+                                        </label>
+                                        <label class="form-label">
+                                            <span>Hasta: </span>
+                                            <input type="date" id="hastaPedido" class="form-control">
+                                        </label>
+                                    </div>
+                                    <div class="d-flex gap-3 options-group">
+                                        <button class="btn btn-light btn-icon d-flex align-items-center border">
+                                            <svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>
+                                            Buscar
+                                        </button>
+                                        <button class="btn btn-light btn-icon d-flex align-items-center border">
+                                            <svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M365.3 93.38l-74.63-74.64C278.6 6.742 262.3 0 245.4 0L64-.0001c-35.35 0-64 28.65-64 64l.0065 384c0 35.34 28.65 64 64 64H320c35.2 0 64-28.8 64-64V138.6C384 121.7 377.3 105.4 365.3 93.38zM336 448c0 8.836-7.164 16-16 16H64.02c-8.838 0-16-7.164-16-16L48 64.13c0-8.836 7.164-16 16-16h160L224 128c0 17.67 14.33 32 32 32h79.1V448zM96 280C96 293.3 106.8 304 120 304h144C277.3 304 288 293.3 288 280S277.3 256 264 256h-144C106.8 256 96 266.8 96 280zM264 352h-144C106.8 352 96 362.8 96 376s10.75 24 24 24h144c13.25 0 24-10.75 24-24S277.3 352 264 352z"/></svg>
+                                            Pendientes
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="table-responsive border">
+                                    <table class="table table-hover" id="tablaPedidos">
+                                        <thead class="card-header">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Cliente</th>
+                                                <th scope="col">Vendedor</th>
+                                                <th scope="col">Monto</th>
+                                                <th scope="col" class="opciones">Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row"><b>123</b></td>
+                                                <td>25/10/2022</td>
+                                                <td>Farma Centro Quibor, C. A</td>
+                                                <td>Wilfredo Torres</td>
+                                                <td>Bs. 140,34</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>142</b></td>
+                                                <td>27/10/2022</td>
+                                                <td>Farma Ro, C. A</td>
+                                                <td>Jennifer Lopez</td>
+                                                <td>Bs. 2304,12</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>245</b></td>
+                                                <td>25/10/2022</td>
+                                                <td>Farmacenter Plus, C. A</td>
+                                                <td>Carlos Morillo</td>
+                                                <td>Bs. 354,57</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>123</b></td>
+                                                <td>25/10/2022</td>
+                                                <td>Farma Centro Quibor, C. A</td>
+                                                <td>Wilfredo Torres</td>
+                                                <td>Bs. 140,34</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>142</b></td>
+                                                <td>27/10/2022</td>
+                                                <td>Farma Ro, C. A</td>
+                                                <td>Jennifer Lopez</td>
+                                                <td>Bs. 2304,12</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><b>245</b></td>
+                                                <td>25/10/2022</td>
+                                                <td>Farmacenter Plus, C. A</td>
+                                                <td>Carlos Morillo</td>
+                                                <td>Bs. 354,57</td>
+                                                <td class="opciones"><a href="#" class="btn btn-sm btn-light border" title="Ver detalles"><svg style="width: 16px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     
     <!-- Jquery & Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
